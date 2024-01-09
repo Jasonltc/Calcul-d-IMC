@@ -1,10 +1,10 @@
 const BMIData = [
-    {name: 'Maigreur', color: 'midnightblue',range: [0, 18.5]},
-    {name: 'Bonne sante', color: 'green',range: [19.5, 25]},
-    {name: 'Surpoids', color: 'lightcoral',range: [25, 30]},
-    {name: 'Obesite moderee', color: 'orange',range: [30, 35]},
-    {name: 'Obesite severe', color: 'crimson',range: [35, 40]},
-    {name: 'Obesite morbide', color: 'purple',range: [40]},
+    {name: 'Thinness', color: 'midnightblue',range: [0, 18.5]},
+    {name: 'Good health', color: 'green',range: [19.5, 25]},
+    {name: 'Overweight', color: 'lightcoral',range: [25, 30]},
+    {name: 'Moderate obesity', color: 'orange',range: [30, 35]},
+    {name: 'Severe obesity', color: 'crimson',range: [35, 40]},
+    {name: 'Morbid obesity', color: 'purple',range: [40]},
 ]
 
 const form = document.querySelector('form');
@@ -40,16 +40,8 @@ const result = document.querySelector(".result");
 function handleError() {
   displayBMI.textContent = 'Wops'
   displayBMI.style.color = 'inherit'
-  result.textContent = "Remplissez correctement les inputs. "
+  result.textContent = "Complete the entries correctly."
 }
-
-/*
-The find() method returns the value of the first element that passes a test.
-The find() method executes a function for each array element.
-The find() method returns undefined if no elements are found.
-The find() method does not execute the function for empty elements.
-The find() method does not change the original array.
-*/
 
 function showResult(BMI){
   const rank = BMIData.find(data => {

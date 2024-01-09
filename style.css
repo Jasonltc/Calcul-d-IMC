@@ -8,16 +8,17 @@ body {
     min-height: 100vh;
     background: linear-gradient(to right, #36d1dc, #5b86e5);
     padding: clamp(20px, 5vw, 50px) 10px 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .container {
-    max-width: 850px;
+    max-width: 600px;
     background: #f1f1f1;
     border: 1px solid #36363692;
     border-radius: 5px;
     box-shadow: 0 4px px rbga(0, 0, 0, 0.3);
-    padding: 30px 0;
     margin: 0 auto;
+    padding: 30px 20px
 }
 
 h1 {
@@ -31,25 +32,23 @@ h1 span {
     font-weight: 700;
 }
 
-.inputs-container {
-    display: flex;
-    justify-content: space-evenly;
+.inputs-container .input-group {
+    margin-bottom: 30px;
 }
 
 .inputs-container label {
     display: block;
     margin-bottom: 10px;
-    margin-left: 5px;
+    font-size: 20px;
 }
 
 .inputs-container input {
-    min-width: 350px;
-    font-size: 18px;
+    font-size: 12px;
     padding: 15px;
     border: none;
     border-bottom: 1px solid #33333333;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
+    width: 100%;
 }
 
 .inputs-container input:focus {
@@ -59,7 +58,7 @@ h1 span {
 form button {
   font-size: 20px;
   min-width: 200px;
-  margin: 40px auto;
+  margin: 0px auto 20px;
   display: block;
   padding: 10px;
   font-weight: 700;
@@ -88,24 +87,22 @@ form button:hover {
   font-size: 20px;
 }
 
-@media screen and (max-width: 800px) {
-    .container {
-        max-width: 600px;
-    }
+@media screen and (min-width: 768px) {
     .inputs-container {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
     }
 
-    .input-group {
-        margin-bottom: 40px;
+    .inputs-container .input-group {
+        width: 100%;
+        max-width: 315px;
     }
+}
 
-    form button {
-        margin-top: unset;
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 850px;
     }
 
 }
-
-
-
